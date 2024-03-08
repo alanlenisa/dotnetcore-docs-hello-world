@@ -13,13 +13,15 @@ public class IndexModel : PageModel
     public string OPT {get;set;}
     private readonly ILogger<IndexModel> _logger;
 
-    public IndexModel(IOptionsSnapshot<Settings> options,ILogger<IndexModel> logger)
+    //public IndexModel(IOptionsSnapshot<Settings> options,ILogger<IndexModel> logger)
+     public IndexModel(ILogger<IndexModel> logger)
     {
         _logger = logger;
-        OPT=options.Value.Opt;
+       // OPT=options.Value.Opt;
     }
 
     public void OnGet()
     {        
+        _logger.LogWarning($"Ciao { DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")}");
     }
 }
