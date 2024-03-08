@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Runtime.InteropServices;
+using TestAppConfig;
 
 namespace dotnetcoresample.Pages;
 
