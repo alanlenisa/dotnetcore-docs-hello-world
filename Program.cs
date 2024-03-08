@@ -1,4 +1,5 @@
 using Azure.Identity;
+using TestAppConfig;
 
 var builder = WebApplication.CreateBuilder(args);
 
