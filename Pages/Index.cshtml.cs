@@ -11,10 +11,10 @@ public class IndexModel : PageModel
     public string OPT {get;set;}
     private readonly ILogger<IndexModel> _logger;
 
-    public IndexModel(ILogger<IndexModel> logger)
+    public IndexModel(IOptionsSnapshot<Settings> options,ILogger<IndexModel> logger)
     {
         _logger = logger;
-        OPT="aszx";
+        OPT=options.Opt;
     }
 
     public void OnGet()
