@@ -1,6 +1,14 @@
+using Azure.Identity;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+
+builder.Configuration.AddAzureAppConfiguration(options =>
+    options.Connect(
+        new Uri("https://ac240307.azconfig.io"),
+        new ManagedIdentityCredential("4d8f0534-d427-46e7-b375-e268f9424bf9")));
+
+// Add services to the container. 
 builder.Services.AddRazorPages();
 
 var app = builder.Build();
