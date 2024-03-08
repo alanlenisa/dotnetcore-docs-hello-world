@@ -16,7 +16,7 @@ public class IndexModel : PageModel
     public IndexModel(IOptionsSnapshot<Settings> options,ILogger<IndexModel> logger)
     {
         _logger = logger;
-        OPT=options.Opt;
+        OPT=options.Value.Opt;
     }
 
     public void OnGet()
