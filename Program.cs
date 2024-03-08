@@ -8,6 +8,8 @@ builder.Configuration.AddAzureAppConfiguration(options =>
         new Uri("https://ac240307.azconfig.io"),
         new ManagedIdentityCredential("4d8f0534-d427-46e7-b375-e268f9424bf9")));
 
+builder.Services.Configure<Settings>(builder.Configuration.GetSection("TestApp:Settings"));
+
 // Add services to the container. 
 builder.Services.AddRazorPages();
 
